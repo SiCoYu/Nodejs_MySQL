@@ -28,3 +28,8 @@ MySQL下载地址：https://dev.mysql.com/downloads/mysql/
 在MySQL WorkBench的Query里执行下面两句SQL语句即可解决连接MySQL权限问题，注意，下面'password'里是你数据库真实密码，不要原文粘贴，错误②就是password没有填写正确导致的
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 flush privileges;
+
+6.执行nodejs脚本
+命令行cmd打开，cd /d XXX（XXX是nodejs脚本项目目录）
+cmd命令行中输入 node xxx.js，即可执行nodejs脚本
+例如：node mysql_01.js   即可执行成功
