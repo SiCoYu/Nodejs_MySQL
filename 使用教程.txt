@@ -1,0 +1,30 @@
+1.安装nodejs
+参考教程：https://www.runoob.com/nodejs/nodejs-install-setup.html
+按照菜鸟教程里安装即可
+
+2.安装mysql和MySQL Workbench
+MySQL下载地址：https://dev.mysql.com/downloads/mysql/
+选择Go to Download Page，需要登录ORACLE账号
+基本都是默认选择，安装MySQL和MYSQL Workbench，MySQL Shell和示例自愿选择
+
+3.nodejs安装mysql模块
+参考教程：
+1.https://www.yisu.com/zixun/618525.html
+注意：nodejs需要将mysql安装到nodejs的项目目录，比如我们在H:\UE_WorkPlace\XGame_New\AliCloud\Nodejs编写nodejs脚本，第三方模块就会在项目同级目录下新建一个node_modules，我们安装的mysql就在node_modules内
+第一步：安装npm install -g cnpm
+第二步：安装cnpm install mysql
+
+4.数据库配置
+①.安装完MySQL Workbench后，根据安装MySQL和MySQL Workbench的账号密码，登录MySQL Workbench
+②.选择Schemas，创建新的Schemas，比如我在用的test
+③.执行mysql语句，可以用别人导出的mysql语句拖入Query，也可在Query里输入
+④.创建完table后，就可以操作数据库进行常规增删查改了
+
+5.编写nodejs脚本操作数据库
+参考教程：https://www.runoob.com/nodejs/nodejs-mysql.html
+注意第一次使用nodejs连接数据库时，会报两个错误
+错误①：Client does not support authentication protocol requested by server; consider upgrading MySQL client
+错误②：Access denied for user 'root'@'localhost' (using password: YES)
+在MySQL WorkBench的Query里执行下面两句SQL语句即可解决连接MySQL权限问题，注意，下面'password'里是你数据库真实密码，不要原文粘贴，错误②就是password没有填写正确导致的
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+flush privileges;
