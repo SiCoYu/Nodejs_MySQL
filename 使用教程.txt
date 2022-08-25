@@ -33,3 +33,8 @@ flush privileges;
 命令行cmd打开，cd /d XXX（XXX是nodejs脚本项目目录）
 cmd命令行中输入 node xxx.js，即可执行nodejs脚本
 例如：node mysql_01.js   即可执行成功
+
+Node.js Express:https://www.runoob.com/nodejs/nodejs-express-framework.html
+Node.js MySQL:https://www.runoob.com/nodejs/nodejs-mysql.html
+Node.js Get/Post:https://www.runoob.com/nodejs/node-js-get-post.html
+Node.js Router:https://www.runoob.com/nodejs/nodejs-router.html
